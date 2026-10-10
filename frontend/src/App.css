@@ -1,0 +1,221 @@
+/* ── App Component Styles ────────────────────── */
+
+/* Page background with subtle gradient */
+.app-bg {
+  background: linear-gradient(180deg, #fafafc 0%, #f3f1fa 50%, #fafafc 100%);
+  min-height: 100vh;
+}
+
+/* ── Cards ────────────────────────────────────── */
+.g-card {
+  background: #ffffff;
+  border: 1px solid #e8e5f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(124,58,237,0.03);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.g-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 8px 32px rgba(124,58,237,0.06);
+}
+
+.g-card-flat {
+  background: #ffffff;
+  border: 1px solid #e8e5f0;
+  border-radius: 1rem;
+}
+
+/* ── Stat Cards ───────────────────────────────── */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e8e5f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+  border-color: #ddd6fe;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 4px 20px rgba(124,58,237,0.05);
+  transform: translateY(-1px);
+}
+
+/* ── Order Buttons ────────────────────────────── */
+.order-btn {
+  background: #f8f7fc;
+  border: 1px solid #e8e5f0;
+  border-radius: 0.875rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.order-btn:hover:not(:disabled) {
+  background: #f5f3ff;
+  border-color: #c4b5fd;
+  box-shadow: 0 2px 12px rgba(124,58,237,0.08);
+  transform: translateY(-1px);
+}
+
+.order-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.order-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Buttons ──────────────────────────────────── */
+.btn-primary {
+  background: #7c3aed;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.875rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #6d28d9;
+  box-shadow: 0 4px 16px rgba(124,58,237,0.3);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #7c3aed;
+  font-weight: 600;
+  border-radius: 0.875rem;
+  border: 1.5px solid #ddd6fe;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: #f5f3ff;
+  border-color: #c4b5fd;
+}
+
+.btn-outline:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-rush {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  border: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.btn-rush:hover:not(:disabled) {
+  box-shadow: 0 4px 24px rgba(124,58,237,0.35);
+  transform: translateY(-1px);
+}
+
+.btn-rush:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-rush:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Event Cards ──────────────────────────────── */
+.event-card {
+  background: #f8f7fc;
+  border: 1px solid #e8e5f0;
+  border-radius: 0.875rem;
+  transition: all 0.2s ease;
+  animation: slideUp 0.3s ease-out;
+}
+
+.event-card:hover {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Input ────────────────────────────────────── */
+.input-field {
+  background: #f8f7fc;
+  border: 1.5px solid #e8e5f0;
+  border-radius: 0.875rem;
+  color: #1a1a2e;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+  background: #ffffff;
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+}
+
+/* ── Pill badge ───────────────────────────────── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.01em;
+}
+
+/* ── Live indicator dot ───────────────────────── */
+.live-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #10b981;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { opacity: 0.6; box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+}
+
+/* ── Navbar ───────────────────────────────────── */
+.navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border-bottom: 1px solid #e8e5f0;
+}
+
+/* ── Vault highlight card ─────────────────────── */
+.vault-card {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border: 1px solid #ddd6fe;
+  border-radius: 1rem;
+}
+
+/* ── Mobile ───────────────────────────────────── */
+@media (max-width: 640px) {
+  .g-card, .g-card-flat, .stat-card {
+    border-radius: 0.875rem;
+  }
+}
